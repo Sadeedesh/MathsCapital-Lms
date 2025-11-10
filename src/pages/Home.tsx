@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { BookOpen, GraduationCap, ArrowRight, Calculator, Users, Award } from 'lucide-react';
+import { BookOpen, GraduationCap, ArrowRight } from 'lucide-react';
 
 export default function Home() {
   const grades = [6, 7, 8, 9, 10, 11];
@@ -10,22 +10,22 @@ export default function Home() {
       <section className="bg-gradient-to-r from-red-900 to-black text-white py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold mb-4">
               Welcome to O/L Mathematics LMS
             </h1>
-            <p className="text-xl md:text-2xl text-red-200 mb-8">
+            <p className="text-lg sm:text-xl md:text-2xl text-red-200 mb-8">
               Comprehensive Mathematics Education for Grades 6-11
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
                 to="/auth"
-                className="bg-white text-red-800 px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition shadow-lg"
+                className="bg-white text-red-800 px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-red-50 transition shadow-lg text-center"
               >
                 Get Started
               </Link>
               <Link
                 to="/auth"
-                className="bg-red-800 text-white px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition border-2 border-white"
+                className="bg-red-800 text-white px-6 sm:px-8 py-3 rounded-lg font-semibold hover:bg-red-700 transition border-2 border-white text-center"
               >
                 Login
               </Link>

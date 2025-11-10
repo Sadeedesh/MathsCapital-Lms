@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { BookOpen, Calendar, GraduationCap } from 'lucide-react';
+import { Calendar, GraduationCap } from 'lucide-react';
 import { Lesson } from '../types/models';
 
 interface LessonCardProps {

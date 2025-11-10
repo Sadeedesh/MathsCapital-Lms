@@ -1,7 +1,7 @@
 import { TrendingUp, BookOpen, FileText, Award, Trophy } from 'lucide-react';
 import Sidebar from '../components/Sidebar';
 import ProgressChart from '../components/ProgressChart';
-import { dummyProgress, dummyLessons, dummyQuizzes } from '../utils/dummyData';
+import { dummyProgress } from '../utils/dummyData';
 
 export default function ProgressPage() {
   // For demo, using student ID '2'
@@ -18,15 +18,7 @@ export default function ProgressPage() {
   };
 
   // Calculate progress data for charts
-  const lessonsData = [
-    { name: 'Completed', value: progress.lessonsCompleted },
-    { name: 'Remaining', value: progress.totalLessons - progress.lessonsCompleted },
-  ];
 
-  const quizzesData = [
-    { name: 'Completed', value: progress.quizzesCompleted },
-    { name: 'Remaining', value: progress.totalQuizzes - progress.quizzesCompleted },
-  ];
 
   // Mock data for score progression over time
   const scoreProgression = [
@@ -54,10 +46,10 @@ export default function ProgressPage() {
     : 0;
 
   return (
-    <div className="min-h-screen bg-black flex">
+    <div className="min-h-screen bg-black flex flex-col lg:flex-row">
       <Sidebar role="student" />
-      <div className="flex-1 p-8">
-        <h1 className="text-3xl font-bold text-red-400 mb-6">Your Progress</h1>
+      <div className="flex-1 p-4 lg:p-8">
+        <h1 className="text-2xl lg:text-3xl font-bold text-red-400 mb-4 lg:mb-6">Your Progress</h1>
 
         {/* Summary Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">

@@ -81,10 +81,10 @@ export default function TeacherDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-black flex">
+    <div className="min-h-screen bg-black flex flex-col lg:flex-row">
       <Sidebar role="teacher" />
-      <div className="flex-1 p-8">
-        <h1 className="text-3xl font-bold text-red-400 mb-6">Teacher Dashboard</h1>
+      <div className="flex-1 p-4 lg:p-8">
+        <h1 className="text-2xl lg:text-3xl font-bold text-red-400 mb-4 lg:mb-6">Teacher Dashboard</h1>
 
         {/* Tabs */}
         <div className="flex space-x-4 mb-6 border-b border-red-800">

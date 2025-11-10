@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { BookOpen, FileText, TrendingUp, PlayCircle } from 'lucide-react';
 import Sidebar from '../components/Sidebar';
 import LessonCard from '../components/LessonCard';
-import QuizCard from '../components/QuizCard';
+
 import { dummyLessons, dummyQuizzes, dummyProgress } from '../utils/dummyData';
 
 export default function StudentDashboard() {
@@ -24,10 +24,10 @@ export default function StudentDashboard() {
   const quizzesProgress = (progress.quizzesCompleted / progress.totalQuizzes) * 100;
 
   return (
-    <div className="min-h-screen bg-black flex">
+    <div className="min-h-screen bg-black flex flex-col lg:flex-row">
       <Sidebar role="student" />
-      <div className="flex-1 p-8">
-        <h1 className="text-3xl font-bold text-red-400 mb-6">Student Dashboard</h1>
+      <div className="flex-1 p-4 lg:p-8">
+        <h1 className="text-2xl lg:text-3xl font-bold text-red-400 mb-4 lg:mb-6">Student Dashboard</h1>
 
         {/* Progress Card */}
         <div className="bg-white rounded-xl shadow-md p-6 mb-6 border border-red-300">

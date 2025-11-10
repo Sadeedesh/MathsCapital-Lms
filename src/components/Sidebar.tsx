@@ -26,9 +26,9 @@ export default function Sidebar({ role }: SidebarProps) {
   const menu = role === 'teacher' ? teacherMenu : studentMenu;
 
   return (
-    <aside className="w-64 bg-white shadow-md border-r border-red-300 min-h-screen">
+    <aside className="hidden lg:block w-64 bg-white shadow-md border-r border-red-300 min-h-screen">
       <div className="p-4">
-        <h2 className="text-lg font-semibold text-red-800 mb-4">
+        <h2 className="text-base lg:text-lg font-semibold text-red-800 mb-4">
           {role === 'teacher' ? 'Teacher' : 'Student'} Menu
         </h2>
         <nav className="space-y-2">
@@ -42,7 +42,7 @@ export default function Sidebar({ role }: SidebarProps) {
               <Link
                 key={item.path}
                 to={item.path}
-                className={`flex items-center space-x-3 px-4 py-3 rounded-lg transition ${
+                className={`flex items-center space-x-2 lg:space-x-3 px-3 lg:px-4 py-2 lg:py-3 rounded-lg transition text-sm lg:text-base ${
                   isActive
                     ? 'bg-red-800 text-white'
                     : 'text-red-800 hover:bg-red-50'

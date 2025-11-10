@@ -16,6 +16,21 @@ body {
   flex-direction: column;
 }
 
+/* Mobile responsive utilities */
+@media (max-width: 640px) {
+  .mobile-hidden {
+    display: none;
+  }
+  
+  .mobile-full {
+    width: 100%;
+  }
+  
+  .mobile-text-sm {
+    font-size: 0.875rem;
+  }
+}
+
 /* Markdown prose styles */
 .prose {
   color: #e5e7eb;
